@@ -31,6 +31,7 @@ body > * {
     color: white;
     padding: 1em 1.5em;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .links {
@@ -119,6 +120,45 @@ body > * {
     border: none;
     border-radius: 5px;
     font-family: "Cabin", sans-serif;
+    cursor: pointer;
+}
+
+/* details */
+.logos-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo_details{
+    max-width: 30%;
+    display: none;
+    object-fit: contain;
+}
+.logo_details.sm{
+    display: block;
+}
+/* details-escrow{ */
+.details-escrow{
+    margin-top: 3em;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+    background-color: #f0eeeb;
+    padding: 3em 3em 0em 3em;
+}
+.details-escrow-h2{
+    color: #000;
+    font-weight: bold;
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+.details-escrow-p{
+    color: #5a5444;
+    margin-bottom: 0.5em;
+}
+.details-escrow-a{
+    color: #5a5444;
 }
 @media (min-width: 768px) {
     body > *{
@@ -145,6 +185,14 @@ body > * {
         padding: 0;
         width: auto;
     }
+    .logo_details.md{
+        max-width: 20%;
+    object-fit: contain;
+        display: block;
+    }
+    .details-escrow-h2, .details-escrow-p{
+        max-width: 70%;
+    }
 }
 @media (min-width: 1200px) {
     body > * {
@@ -167,5 +215,21 @@ body > * {
     .intro_img{
         max-width: 40%;
         order: 2;
+    }
+    .logo_details{
+        width: 10%;
+        display: block;
+        /* object-fit: contain; */
+    }
+    .details-escrow{
+        margin-top: 3em;
+        display: flex;
+        flex-direction: row;
+        background-color: #f0eeeb;
+        padding: 0em 3em 0em 4em;
+        gap: 3em;
+    }
+    .details-escrow-h2, .details-escrow-p{
+        max-width: 70%;
     }
 }
