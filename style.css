@@ -154,8 +154,28 @@ body > * {
     color: #000;
     font-weight: bold;
     font-size: 3em;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
+    background: linear-gradient(to right, #4d4d4d 0, white 10%, #4d4d4d 20%);
+    background-position: 0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s infinite linear;
+    animation-fill-mode: forwards;
+    -webkit-text-size-adjust: none;
+    white-space: nowrap;
 }
+@keyframes shine {
+    0%{
+        background-position: 0;
+    }
+    60%{
+        background-position: 180px;
+    }
+    100%{
+        background-position: 360px;
+    }
+}
+
 .details-escrow-p{
     color: #5a5444;
     margin-bottom: 0.5em;
